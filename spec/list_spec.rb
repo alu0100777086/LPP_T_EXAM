@@ -1,6 +1,6 @@
 # encoding: UTF-8
-require "./lib/my_gem/test.rb"
-require "./lib/my_gem/list.rb"
+require 'my-gem'
+require 'spec_helper'
 describe Test do
 	before :each do
 		@q1 = Test.new("Hola?", ["Si", "No", "Quizas", "Puede"], 3, 1)

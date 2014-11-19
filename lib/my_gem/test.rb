@@ -2,11 +2,11 @@ class Test
     include Comparable
   attr_reader :q, :a1, :t, :a
   def initialize(q,a1,t,a)
+    @q, @a1, @t, @a= q, a1, t, a
+  end
   def <=> other
     return nil unless other.is_a?(self.class)
     [self.q, self.a1, self.t, self.a] <=> [other.q, other.a1, other.t, other.a]
-  end
-    @q, @a1, @t, @a= q, a1, t, a
   end
   def show()
     #print "Pregunta: ", q, "\n"
@@ -16,7 +16,7 @@ class Test
     #puts "\n\nElige una de las opciones."
      for i in(0...a1.size)
        if @a == i+1
-      @a = a1[i]
+       	 @a = a1[i]
        end
      end
     #print "\nLa respuesta correcta es: ", a, "\n\n\n\n"
